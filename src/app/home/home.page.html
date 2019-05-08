@@ -8,27 +8,10 @@
 
 <ion-content padding>
   <ion-list>
-    <ion-item (click)="showList()" class="homeItem" color="secondary">
-      <ion-label slot="start">Nickname</ion-label>
-      <ion-icon name="arrow-forward" slot="end"></ion-icon>
-    </ion-item>
-    <ion-item (click)="showList()" class="homeItem" color="secondary">
-      <ion-label slot="start">Nickname</ion-label>
-      <ion-icon name="arrow-forward" slot="end"></ion-icon>
-    </ion-item>
-    <ion-item (click)="showList()" class="homeItem" color="secondary">
-      <ion-label slot="start">Nickname</ion-label>
+    <ion-item *ngFor="let f of friends" (click)="showList(f.friend_id)" class="homeItem" color="secondary">
+      <ion-label slot="start">{{ f.nickname }}</ion-label>
       <ion-icon name="arrow-forward" slot="end"></ion-icon>
     </ion-item>
   </ion-list>
-  <ion-grid>
-    <ion-row>
-      <ion-col>
-        <ion-button (click)="addPhrase" expand="full">Add New Phrase</ion-button>
-      </ion-col>
-      <ion-col>
-        <ion-button (click)="addFriend" expand="full">Add New Friend</ion-button>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+  <ion-button (click)="addFriend()" expand="full">Add New Friend</ion-button>
 </ion-content>

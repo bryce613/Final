@@ -11,8 +11,8 @@ export class HomePage {
   constructor(private router: Router, public ps: PhrasesService){} // include Router in the class constructor
 
   // create the navigate function, then use the router’s navigate method to go to the proper route
-  showList() {
-    this.router.navigate(['./list']);
+  showList(id) {
+    this.router.navigate(['./list/' + id]);
     console.log("Working");
   }
 
@@ -22,6 +22,16 @@ export class HomePage {
     this.ps.getData()
     .then(data => {
       this.friends = data;
+    })
+  }
+
+  addFriend() {
+    let newName = prompt("Enter friends name");
+    this.ps.addFriend(newName).then( () => {
+      this.ps.getData()
+      .then(data => {
+        this.friends = data;
+      })
     })
   }
 }

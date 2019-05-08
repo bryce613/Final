@@ -8,26 +8,13 @@
 </ion-header>
 
 <ion-content>
+  <ion-button (click)="addPhrase()" expand="full">Add New Phrase</ion-button>
   <ion-list>
-    <ion-item class="listItem" color="secondary">
+    <ion-item class="listItem" color="secondary" *ngFor="let p of phrases.phrases">
       <ion-label>
-        <p class="smallList">Text</p>
-        <p class="smallList">Context</p>
-        <p class="smallList">Date Added</p>
-      </ion-label>
-    </ion-item>
-    <ion-item class="listItem" color="secondary">
-      <ion-label>
-        <p class="smallList">Text</p>
-        <p class="smallList">Context</p>
-        <p class="smallList">Date Added</p>
-      </ion-label>
-    </ion-item>
-    <ion-item class="listItem" color="secondary">
-      <ion-label>
-        <p class="smallList">Text</p>
-        <p class="smallList">Context</p>
-        <p class="smallList">Date Added</p>
+        <p class="smallList">{{p.phrase_text}}</p>
+        <p class="smallList">{{p.phrase_context}}</p>
+        <p class="smallList">{{p.date_added}}</p>
       </ion-label>
     </ion-item>
   </ion-list>
