@@ -1,14 +1,34 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      Phrases From Friends
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+<ion-content padding>
+  <ion-list>
+    <ion-item (click)="showList()" class="homeItem" color="secondary">
+      <ion-label slot="start">Nickname</ion-label>
+      <ion-icon name="arrow-forward" slot="end"></ion-icon>
+    </ion-item>
+    <ion-item (click)="showList()" class="homeItem" color="secondary">
+      <ion-label slot="start">Nickname</ion-label>
+      <ion-icon name="arrow-forward" slot="end"></ion-icon>
+    </ion-item>
+    <ion-item (click)="showList()" class="homeItem" color="secondary">
+      <ion-label slot="start">Nickname</ion-label>
+      <ion-icon name="arrow-forward" slot="end"></ion-icon>
+    </ion-item>
+  </ion-list>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="addPhrase" expand="full">Add New Phrase</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="addFriend" expand="full">Add New Friend</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

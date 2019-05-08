@@ -9,3 +9,46 @@
 @import '~@ionic/angular/css/text-alignment.css';
 @import '~@ionic/angular/css/text-transformation.css';
 @import '~@ionic/angular/css/flex-utils.css';
+
+ion-header {
+    --background: #8B9EB7;
+}
+ion-toolbar {
+    //--color: white !important;
+    --background: #8B9EB7 !important;
+    border: solid 3px #340140;
+}
+ion-title {
+    text-align: center;
+}
+ion-list {
+    color: #340140 !important;
+}
+ion-footer {
+    background-color: #8B9EB7;
+}
+.homeItem {
+    background-color: #91F5AD !important;
+    border: solid 3px #340140;
+    margin: 10px;
+}
+.listItem {
+    background-color: #91F5AD !important;
+    border-bottom: solid 3px #340140;
+}
+.smallList {
+    border-bottom: solid 1px #340140;
+}
+ion-button {
+    --border-style: solid;
+    --border-width: 3px;
+    --border-color: #340140;
+    --border-radius: 0;
+    --background: #8B9EB7;
+    --color: black;
+    --background-activated: #657589;
+    --color-activated: black;
+}
+ion-back-button {
+    color: black !important;
+}
